@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    color: rgb(88, 46, 243);
+}
+
+.right{
+    float: right;
+}
+
+label, #addItem, input{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+ul{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    list-style-type:square;
+    color: blueviolet;
+    align-items: center;
+}
+
+.urgent{
+    color: red;
+}
+
+.normal{
+    color: black;
+}
