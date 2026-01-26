@@ -27,6 +27,16 @@ label, #addItem, input{
     flex-direction: column;
 }
 
+#highlabel{
+    color: red;
+}
+#midlabel{
+    color: rgb(255, 153, 0);
+}
+#lowlabel{
+    color: green;
+}
+
 ul{
     font-size: 20px;
     list-style-type:square;
