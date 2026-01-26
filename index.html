@@ -10,18 +10,23 @@
 <body>
     <h1>To-do List</h1>
 
-    <div class="left">
-        <label for="">New item</label>
-        <input id="newItem" type="text">
-        <button id="addItem">Add</button>
-    </div>
-    <div id="todolist" class="right">
-        <ul id="list">
-            <li class="urgent" id="item1" onclick="crossoff('item1')">Study Front-end <button onclick="removeItem('item1'), 3000">delete</button></li>
-            <li class="normal" id="item2" onclick="crossoff('item2')">Walk my dog <button onclick="removeItem('item2')">delete</button></li>
-            <li class="normal" id="item3" onclick="crossoff('item3')">Read a book <button onclick="removeItem('item3')">delete</button></li>
-            <li class="urgent" id="item4" onclick="crossoff('item4')">Meet my friend <button onclick="removeItem('item4')">delete</button></li>
-        </ul>
+    <div class="container">
+        <div class="left">
+            <label for="">New item</label>
+            <input id="newItem" type="text">
+            <button id="addItem">Add</button>
+            <br>
+            <input type="radio" id="high" >
+            <label for="high">HIGH</label><br>
+            <input type="radio" id="mid">
+            <label for="mid">MID</label><br>
+            <input type="radio" id="low">
+            <label for="low">LOW</label>
+        </div>
+        <div id="todolist" class="right">
+            <ul id="list">
+            </ul>
+        </div>
     </div>
     
 

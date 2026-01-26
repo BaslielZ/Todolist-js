@@ -1,30 +1,47 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
 h1{
     text-align: center;
     color: rgb(88, 46, 243);
 }
+.left{
+    padding: 20px;
+    width: 30%;
+    background-color: rgb(214, 211, 248);
+}
 
 .right{
-    float: right;
+    padding: 10px;
+    width: 70%;
+    justify-items: center;
+    background-color: rgba(238, 186, 245, 0.5);
 }
 
 label, #addItem, input{
     font-size: 20px;
     margin-right: 10px;
+    display: inline-block;
+    flex-direction: column;
 }
 
 ul{
     font-size: 20px;
-    display: flex;
-    flex-direction: column;
     list-style-type:square;
     color: blueviolet;
     align-items: center;
 }
 
-.urgent{
+.high{
     color: red;
 }
 
-.normal{
-    color: black;
+.mid{
+    color: rgb(255, 153, 0);
+}
+
+.low{
+    color: green;
 }
