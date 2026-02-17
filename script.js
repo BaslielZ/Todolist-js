@@ -71,9 +71,6 @@ function renderList(){
         }
     }
 }
-    
-
-
 
 function removeItem(todo) {
   todolist = todolist.filter(item => item.text !== todo);

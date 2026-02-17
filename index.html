@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ToDo List</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <h1>To-do List</h1>
+     <header>
+        <h1>To-do List</h1>
+    <nav>
+        <ul>
+            <li class="navitem">Profile</li>
+            <li class="navitem">Settings</li>
+            <li class="navitem">About</li>
+            <li class="navitem"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+     </header>   
+    
 
     <div class="container">
         <div class="left">
-            <label for="">New item</label>
-            <input id="newItem" type="text">
-            <button id="addItem">Add</button>
-            <br>
-            <input type="radio" id="high" >
-            <label id="highlabel" for="high">HIGH</label><br>
-            <input type="radio" id="mid">
-            <label id="midlabel" for="mid">MID</label><br>
-            <input type="radio" id="low">
-            <label id="lowlabel" for="low">LOW</label>
+            <form action="" onsubmit="false">
+                 <label for="">New item</label>
+                <input id="newItem" type="text" placeholder="Enter task">
+                <button id="addItem">Add item</button>
+                <br>
+                <input type="radio" id="high" >
+                <label id="highlabel" for="high">HIGH</label><br>
+                <input type="radio" id="mid">
+                <label id="midlabel" for="mid">MID</label><br>
+                <input type="radio" id="low">
+                <label id="lowlabel" for="low">LOW</label>
+            </form>
         </div>
         <div id="todolist" class="right">
             <ul id="list">
             </ul>
         </div>
     </div>
+
+    <footer>
+        <p><a href="contact.html"> Contact Us</a> | ToDoList 2026 FrontEndDev</p>
+    </footer>
     
 
 
