@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <style>
         main{
-            border-radius: 10px;
-            margin-left: 100px;
-            margin-right: 100px;
+            border-radius: 30px;
+            margin-top: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
             display: flex;
             justify-content: center;
-            padding: 20px;
+            padding-top: 70px;
             background-color: rgb(243, 210, 253);
+            flex: 1;
         }
         form{
             width: 50rem;
@@ -25,7 +27,6 @@
         }
         a{
             text-decoration: none;
-            color: black;
             
         }
         input[type="submit"] {
@@ -39,6 +40,12 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        footer{
+            margin-top: 50px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -54,7 +61,7 @@
     </nav>
      </header> 
      <main>
-        <form action="/submit" method="post">
+        <form action="/index.html">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -62,10 +69,10 @@
             <input type="email" id="email" name="email" required>
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="10" required></textarea>
 
             <input type="submit" value="Send Message">
-            <a href="index.html">Back to ToDoList</a>
+            <a href="index.html">Back to ToDo List</a>
         </form>
      </main>
      

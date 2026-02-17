@@ -3,14 +3,18 @@
     padding: 0;
 }
 body{
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header {
-    margin-top: 30px;
+    background-color: rgb(35, 26, 42);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
+    padding-top: 20px;
+    color: rgb(233, 212, 247);
 }
 
 h1 {
@@ -24,6 +28,7 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-right: 100px;
 }
 
 .navitem {
@@ -32,32 +37,46 @@ nav ul {
 .container{
     display: flex;
     flex-direction: row;
+    flex: 1;
 }
 
-h1{
-    text-align: center;
-    color: rgb(88, 46, 243);
-}
 .left{
     padding: 20px;
+    padding-top: 50px;
     width: 30%;
     background-color: rgb(214, 211, 248);
 }
 
 .right{
     padding: 10px;
+    padding-top: 50px;
     width: 70%;
     justify-items: center;
-    background-color: rgba(238, 186, 245, 0.5);
+    background-color: rgba(244, 206, 249);
 }
 
-label, #addItem, input{
-    padding: 5px;
-    font-size: 20px;
+input{
+    padding: 3px;
+    font-size: 18px;
     margin-right: 10px;
-    margin-bottom: 5px;
-    display: inline-block;
-    flex-direction: column;
+    margin-bottom: 10px;
+}
+label{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#addItem{
+    padding: 8px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#addItem:hover{
+    background-color: #45a049;
 }
 
 #highlabel{
@@ -70,16 +89,31 @@ label, #addItem, input{
     color: green;
 }
 
+.delete-btn{
+    margin-left: 15px;
+    background-color: rgb(247, 66, 66);
+    padding: 5px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.delete-btn:hover{
+    background-color: red;
+}
+
 ul{
     font-size: 20px;
     list-style-type:square;
-    color: blueviolet;
     align-items: center;
 }
 
 a{
     text-decoration: inherit;
     color: inherit;
+}
+a:hover{
+    text-decoration: underline;
 }
 
 .high{
@@ -98,11 +132,6 @@ a{
 footer{
     padding: 18px;
     background-color: rgb(185, 122, 243);
-    margin-top: 100px;
     display: flex;
     justify-content: center;
-}
-
-footer a{
-    color: rgb(53, 0, 102);    
 }

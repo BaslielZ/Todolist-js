@@ -57,17 +57,17 @@ function renderList(){
     document.getElementById('list').innerHTML = ""
     for (i=0; i<todolist.length;i++){
         if (todolist[i].priority == 'high'){
-            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button onclick="removeItem('${todolist[i].text}')">delete</button></li>`
+            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
         }
     }
     for (i=0; i<todolist.length;i++){
         if (todolist[i].priority == 'mid'){
-            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button onclick="removeItem('${todolist[i].text}')">delete</button></li>`
+            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
         }
     }
     for (i=0; i<todolist.length;i++){
         if (todolist[i].priority == 'low'){
-            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button onclick="removeItem('${todolist[i].text}')">delete</button></li>`
+            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
         }
     }
 }
