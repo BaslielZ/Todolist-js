@@ -116,15 +116,19 @@ a:hover{
     text-decoration: underline;
 }
 
-.high{
+li[data-priority='high'] span{
     color: red;
+    text-transform: uppercase;
+    
 }
 
-.mid{
+li[data-priority='mid'] span{
     color: rgb(255, 153, 0);
+    text-transform: uppercase;
 }
 
-.low{
+li[data-priority='low'] span{
+    text-transform: uppercase;
     color: green;
 }
 
@@ -133,5 +137,10 @@ footer{
     padding: 18px;
     background-color: rgb(185, 122, 243);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+footer p{
+    text-align: center;
+    margin-bottom: 5px;
 }

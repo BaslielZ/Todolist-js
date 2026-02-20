@@ -57,17 +57,17 @@ function renderList(){
     document.getElementById('list').innerHTML = ""
     for (i=0; i<todolist.length;i++){
         if (todolist[i].priority == 'high'){
-            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
+            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" data-priority="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')"> <span class="priority-label"> ${todolist[i].priority}</span> ${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
         }
     }
     for (i=0; i<todolist.length;i++){
         if (todolist[i].priority == 'mid'){
-            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
+            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" data-priority="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')"> <span class="priority-label"> ${todolist[i].priority}</span> ${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
         }
     }
     for (i=0; i<todolist.length;i++){
         if (todolist[i].priority == 'low'){
-            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')">${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
+            document.getElementById('list').innerHTML += ` <li class="${todolist[i].priority}" data-priority="${todolist[i].priority}" id="item${num++}" onclick="crossoff('item${num-1}')"> <span class="priority-label"> ${todolist[i].priority}</span> ${todolist[i].text} <button class="delete-btn" onclick="removeItem('${todolist[i].text}')">delete</button></li>`
         }
     }
 }
@@ -78,3 +78,24 @@ function removeItem(todo) {
   saveTodos()
   renderList()
 }
+
+
+
+//JSON fetching api
+
+fetch("https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single")
+.then(response => {
+    if (!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`)
+    }
+    return response.json()
+})
+.then(joke => {
+    console.log(joke)
+    footer = document.getElementById('footer')
+    text = document.createElement('p')
+    text.textContent = joke.joke
+    footer.appendChild(text)
+})
+.catch(error => console.error(error))
+
